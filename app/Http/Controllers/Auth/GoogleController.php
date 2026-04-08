@@ -21,19 +21,32 @@ class GoogleController extends Controller
     {
         $googleUser = Socialite::driver('google')->stateless()->user();
 
-        $user = User::updateOrCreate(
-            ['email' => $googleUser->getEmail()],
-            [
-                'name'      => $googleUser->getName(),
-                'google_id' => $googleUser->getId(),
-                'avatar'    => $googleUser->getAvatar(),
-                'password'  => bcrypt(Str::random(32)),
-            ]
-        );
+        // 🔥 ambil list admin dari config
+        $adminEmails = config('app.admin_emails') ?? [];
 
-        Auth::login($user);
+        $isAdmin = in_array($googleUser->email, $adminEmails);
 
-        return redirect()->route('home');
+        $user = User::where('email', $googleUser->email)->first();
+
+        if (!$user) {
+            $user = User::create([
+                'name' => $googleUser->name,
+                'email' => $googleUser->email,
+                'avatar' => $googleUser->avatar,
+                'google_id' => $googleUser->id,
+                'password' => null,
+                'is_admin' => $isAdmin,
+            ]);
+        }
+
+        auth()->login($user);
+
+        // 🔥 redirect beda role
+        if ($user->is_admin) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        return redirect()->route('dashboard');
     }
 
 }

@@ -7,9 +7,8 @@ use App\Models\Service;
 
 class ServiceController extends Controller
 {
-    public function show($id)
-{
-    $service = Service::findOrFail($id);
-    return view('pages.services.show', compact('service'));
-}
+    public function show(Service $service)
+    {
+        return view('pages.services.show', compact('service'));
+    }
 }

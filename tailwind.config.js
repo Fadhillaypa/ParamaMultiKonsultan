@@ -13,7 +13,13 @@ export default {
     ],
 
     theme: {
-        extend: {},
+    extend: {
+        colors: {
+        gold: '#C9A646',
+        dark: '#0F0F0F',
+        dark2: '#1A1A1A'
+        }
+    }
     },
     plugins: [],
 }

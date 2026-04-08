@@ -3,195 +3,97 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-28">
+<section class="relative bg-dark text-white py-28">
+    {{-- BACKGROUND GRID --}}
     <div class="absolute inset-0 bg-[url('/img/grid.svg')] opacity-10"></div>
 
+    {{-- GOLD GLOW --}}
+    <div class="absolute inset-0 
+        bg-[radial-gradient(circle_at_center,rgba(201,166,70,0.08),transparent)]">
+    </div>
+
     <div class="relative max-w-7xl mx-auto px-6 text-center pt-14 py-5">
-        <span class="uppercase tracking-widest text-sm text-blue-400">
+        <span data-aos="fade-up"
+            class="uppercase tracking-widest text-sm text-gold leading-relaxed">
             Konsultan Perencanaan Terdaftar INKINDO
         </span>
 
-        <h1 class="mt-4 text-4xl md:text-5xl font-bold leading-tight">
-            Solusi Perencanaan Terpadu<br>
-            <span class="text-blue-400">Profesional & Berstandar Nasional</span>
+        <h1 data-aos="fade-up" data-aos-delay="100"
+            class="mt-4 text-4xl md:text-5xl font-bold tracking-tight ">
+            Solusi Konsultan Perencanaan Profesional<br>
+            <span class="text-gold">Terpercaya & Berstandar Nasional</span>
         </h1>
 
-        <p class="mt-6 max-w-3xl mx-auto text-slate-300 text-lg">
-            CV. Parama Multi Konsultan menghadirkan layanan perencanaan
-            yang presisi, terukur, dan berorientasi pada kualitas jangka panjang.
+        <p data-aos="fade-up" data-aos-delay="200"
+            class="mt-6 max-w-3xl mx-auto text-slate-300 leading-relaxed text-lg">
+            CV. Parama Multi Konsultan hadir membantu perencanaan, pengawasan, 
+            dan manajemen proyek konstruksi dengan pendekatan profesional dan terukur.
         </p>
 
-        <div class="mt-10 flex justify-center gap-4">
-            <a href="#services"
-               class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl shadow 
-               hover:scale-105 hover:bg-blue-500 transition">
-                Lihat Layanan
-            </a>
-
+        <div data-aos="fade-up" data-aos-delay="300"
+            class="mt-10 flex justify-center gap-4">
             <a href="contact"
-               class="inline-block border border-white/30 px-8 py-4 rounded-xl shadow hover:scale-105
-                      hover:bg-white hover:text-slate-900 transition">
-                Konsultasi
+               class="inline-block bg-gold text-white font-semibold px-8 py-4 rounded-xl shadow 
+                hover:scale-105 hover:bg-dark2 transition hover:shadow-[0_0_25px_rgba(201,166,70,0.9)] 
+                border border-gold/20 hover:border-gold">
+                Mulai Konsultasi Sekarang
             </a>
         </div>
     </div>
 </section>
 
 {{-- TRUST INDICATORS --}}
-<section class="bg-white py-16">
+<section class="bg-dark2 py-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 
-            <div>
-                <p class="text-3xl font-bold text-blue-600">INKINDO</p>
-                <p class="text-sm text-gray-500 mt-2">Terdaftar Resmi</p>
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="hover:scale-110 transition">
+                <p class="text-3xl font-bold tracking-tight text-white drop-shadow-[0_0_8px_rgba(201,166,70,0.6)]">INKINDO</p>
+                <p class="text-sm text-slate-300 leading-relaxed mt-2">Terdaftar Resmi</p>
             </div>
 
-            <div>
-                <p class="text-3xl font-bold text-gray-800">7+</p>
-                <p class="text-sm text-gray-500 mt-2">Tahun Pengalaman</p>
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="hover:scale-110 transition">
+                <p class="text-3xl font-bold tracking-tight text-gold drop-shadow-[0_0_8px_rgba(201,166,70,0.6)]">7+</p>
+                <p class="text-sm text-slate-300 leading-relaxed mt-2">Tahun Pengalaman</p>
             </div>
 
-            <div>
-                <p class="text-3xl font-bold text-gray-800">50+</p>
-                <p class="text-sm text-gray-500 mt-2">Proyek Ditangani</p>
+            <div data-aos="fade-up" data-aos-delay="300"
+                class="hover:scale-110 transition">
+                <p class="text-3xl font-bold tracking-tight text-gold drop-shadow-[0_0_8px_rgba(201,166,70,0.6)]">50+</p>
+                <p class="text-sm text-slate-300 leading-relaxed mt-2">Proyek Ditangani</p>
             </div>
 
-            <div>
-                <p class="text-3xl font-bold text-gray-800">Nasional</p>
-                <p class="text-sm text-gray-500 mt-2">Area Layanan</p>
+            <div data-aos="fade-up" data-aos-delay="400"
+                class="hover:scale-110 transition">
+                <p class="text-3xl font-bold tracking-tight text-gold drop-shadow-[0_0_8px_rgba(201,166,70,0.6)]">Nasional</p>
+                <p class="text-sm text-slate-300 leading-relaxed mt-2">Area Layanan</p>
             </div>
 
         </div>
     </div>
 </section>
-
-{{-- ABOUT US --}}
-<section class="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">
-            Tentang CV. Parama Multi Konsultan
-        </h2>
-        <p class="text-gray-300 leading-relaxed">
-            CV. Parama Multi Konsultan adalah perusahaan konsultan perencanaan
-            terdaftar INKINDO yang berfokus pada layanan profesional,
-            berstandar nasional dan internasional.
-        </p>
-    </div>
-</section>
-
-{{-- BENEFIT LOGIN --}}
-<section class="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">
-            Benefit Klien Terdaftar
-        </h2>
-        <p class="mb-10 text-blue-100">
-            Dapatkan akses eksklusif setelah login
-        </p>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white/10 p-6 rounded-xl">
-                📁 Akses Dokumen Proyek
-            </div>
-            <div class="bg-white/10 p-6 rounded-xl">
-                📊 Monitoring Progress
-            </div>
-            <div class="bg-white/10 p-6 rounded-xl">
-                💬 Konsultasi Langsung
-            </div>
-        </div>
-
-        @guest
-            <a href="{{ route('auth.google') }}"
-               class="inline-block border border-white/30 px-8 py-4 mt-8 rounded-xl shadow hover:scale-105
-                      hover:bg-white hover:text-slate-900 transition">
-                Login untuk Akses Klien
-            </a>
-        @endguest
-    </div>
-</section>
-
-{{-- SERVICES --}}
-
-<section id="services" class="bg-slate-50 py-20">
-    <div class="max-w-7xl mx-auto px-6">
-
-    {{-- Heading --}}
-    <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="text-4xl font-bold text-slate-900 mb-4">
-            Layanan Konsultasi Profesional
-        </h2>
-        <p class="text-slate-600">
-            Kami menyediakan berbagai layanan konsultasi teknik untuk
-            mendukung perencanaan, pengawasan, dan keberhasilan proyek Anda.
-        </p>
-    </div>
-
-    {{-- Service Cards --}}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        @forelse ($services as $service)
-            <a href="{{ route('services.show', $service->id) }}"
-               class="group bg-white p-6 rounded-xl shadow
-                        hover:shadow-xl transition
-                        border-t-4
-                        @switch($service->color)
-                            @case('indigo') border-indigo-500 @break
-                            @case('green') border-green-600 @break
-                            @case('red') border-red-600 @break
-                        @endswitch">
-
-                    <div class="mb-4
-                        @switch($service->color)
-                            @case('indigo') text-indigo-600 @break
-                            @case('green') text-green-600 @break
-                            @case('red') text-red-600 @break
-                            @default text-gray-600
-                        @endswitch
-                        group-hover:scale-110 transition">
-                    @include('components.service-icon', ['icon' => $service->icon])
-                </div>
-
-                <h3 class="text-xl font-semibold text-slate-900 mb-3">
-                    {{ $service->title }}
-                </h3>
-
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    {{ $service->description }}
-                </p>
-
-                <span class="inline-block mt-6 text-sm font-semibold text-blue-600 group-hover:underline">
-                    Lihat Detail →
-                </span>
-            </a>
-        @empty
-            <p class="text-center text-gray-500 col-span-3">
-                Layanan belum tersedia
-            </p>
-        @endforelse
-    </div>
-</div>
-</section>
-
 
 {{-- KENAPA MEMILIH KAMI --}}
-<section class="bg-gray-50 py-12">
+<section class="bg-dark py-24">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-14">
+        <h2 class="text-3xl font-bold tracking-tight text-gold text-center mb-14">
             Mengapa Memilih Kami?
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
             {{-- CARD --}}
-            <div class="group bg-white p-8 rounded-2xl
-                        border border-gray-100
-                        shadow-md hover:shadow-xl
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="group bg-dark2 p-8 rounded-2xl
+                        border border-gold shadow-[0_0_20px_rgba(201,166,70,0.7)]
+                        hover:shadow-xl
                         hover:-translate-y-2
                         transition duration-300">
 
                 <div class="w-14 h-14 mb-6 flex items-center justify-center
-                            rounded-xl bg-amber-600 text-white
+                            rounded-xl bg-gold text-white
                             group-hover:scale-110 transition">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5"
                         viewBox="0 0 24 24">
@@ -199,24 +101,25 @@
                     </svg>
                 </div>
 
-                <h3 class="text-xl font-semibold mb-3">
+                <h3 class="text-xl font-semibold tracking-tight text-slate-200 mb-3">
                     Tepat Waktu & Terukur
                 </h3>
 
-                <p class="text-gray-600 text-sm leading-relaxed">
+                <p class="text-slate-500 leading-relaxed text-sm">
                     Perencanaan matang, jadwal jelas, dan hasil terukur sesuai standar nasional.
                 </p>
             </div>
 
             {{-- CARD --}}
-            <div class="group bg-white p-8 rounded-2xl
-                        border border-gray-100
-                        shadow-md hover:shadow-xl
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="group bg-dark2 p-8 rounded-2xl
+                        border border-gold shadow-[0_0_20px_rgba(201,166,70,0.7)]
+                        hover:shadow-xl
                         hover:-translate-y-2
                         transition duration-300">
 
                 <div class="w-14 h-14 mb-6 flex items-center justify-center
-                            rounded-xl bg-emerald-600 text-white
+                            rounded-xl bg-gold text-white
                             group-hover:scale-110 transition">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5"
                         viewBox="0 0 24 24">
@@ -224,24 +127,25 @@
                     </svg>
                 </div>
 
-                <h3 class="text-xl font-semibold mb-3">
+                <h3 class="text-xl font-semibold tracking-tight text-slate-200 mb-3">
                     Berstandar INKINDO
                 </h3>
 
-                <p class="text-gray-600 text-sm leading-relaxed">
+                <p class="text-slate-500 text-sm leading-relaxed">
                     Legal, profesional, dan sesuai regulasi nasional serta internasional.
                 </p>
             </div>
 
             {{-- CARD --}}
-            <div class="group bg-white p-8 rounded-2xl
-                        border border-gray-100
-                        shadow-md hover:shadow-xl
+            <div data-aos="fade-up" data-aos-delay="300"
+                class="group bg-dark2 p-8 rounded-2xl
+                        border border-gold shadow-[0_0_20px_rgba(201,166,70,0.7)]
+                        hover:shadow-xl
                         hover:-translate-y-2
                         transition duration-300">
 
                 <div class="w-14 h-14 mb-6 flex items-center justify-center
-                            rounded-xl bg-violet-600 text-white
+                            rounded-xl bg-gold text-white
                             group-hover:scale-110 transition">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5"
                         viewBox="0 0 24 24">
@@ -249,52 +153,11 @@
                     </svg>
                 </div>
 
-                <h3 class="text-xl font-semibold mb-3">
-                    Konsultasi Fleksibel
-                </h3>
-
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Diskusi online / offline, cepat tanggap, dan fokus solusi terbaik.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-{{-- KEUNGGULAN KAMI --}}
-<section class="bg-slate-50 py-20">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-14">
-            Keunggulan Kami
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-            <div class="bg-white p-8 rounded-xl border hover:border-blue-600 transition">
-                <h3 class="font-semibold text-lg mb-3">
-                    Pendekatan Profesional
-                </h3>
-                <p class="text-gray-600 text-sm">
-                    Setiap proyek dianalisis secara komprehensif dengan metodologi terukur.
-                </p>
-            </div>
-
-            <div class="bg-white p-8 rounded-xl border hover:border-blue-600 transition">
-                <h3 class="font-semibold text-lg mb-3">
-                    Kepatuhan Regulasi
-                </h3>
-                <p class="text-gray-600 text-sm">
-                    Seluruh perencanaan mengacu pada standar nasional dan peraturan berlaku.
-                </p>
-            </div>
-
-            <div class="bg-white p-8 rounded-xl border hover:border-blue-600 transition">
-                <h3 class="font-semibold text-lg mb-3">
+                <h3 class="text-xl font-semibold tracking-tight text-slate-200 mb-3">
                     Tim Berpengalaman
                 </h3>
-                <p class="text-gray-600 text-sm">
+
+                <p class="text-slate-500 text-sm leading-relaxed">
                     Didukung tenaga ahli berpengalaman lintas bidang perencanaan.
                 </p>
             </div>
@@ -303,71 +166,150 @@
     </div>
 </section>
 
+{{-- SERVICES --}}
+<section id="services" class="bg-dark2 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+    {{-- Heading --}}
+    <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-4xl font-bold tracking-tight text-gold mb-4">
+            Layanan Konsultasi Profesional
+        </h2>
+        <p class="text-slate-300 leading-relaxed">
+            Kami menyediakan berbagai layanan konsultasi teknik untuk
+            mendukung perencanaan, pengawasan, dan keberhasilan proyek Anda.
+        </p>
+    </div>
+
+    {{-- Service Cards --}}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @forelse ($services as $service)
+            <a data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}"
+                href="{{ route('services.show', $service) }}"
+               class="relative group bg-dark p-6 rounded-xl shadow
+                        border-t-4 transition duration-300 
+                        hover:-translate-y-2 hover:shadow-xl
+                        active:scale-95
+                        @switch($service->color)
+                            @case('indigo') border-gold @break
+                            @case('green') border-gold @break
+                            @case('red') border-gold @break
+                            @default border-gold
+                        @endswitch">
+
+                {{-- OVERLAY --}}
+                <div class="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition duration-300 rounded-xl"></div>
+
+                {{-- ICON --}}
+                    <div class="relative mb-4
+                        @switch($service->color)
+                            @case('indigo') text-gold @break
+                            @case('green') text-gold @break
+                            @case('red') text-gold @break
+                            @default text-gold
+                        @endswitch
+                        group-hover:scale-110 
+                        group-hover:rotate-3 transition duration-300">
+                    @include('components.service-icon', ['icon' => $service->icon])
+                </div>
+
+                {{-- TITLE --}}
+                <h3 class="relative text-xl font-semibold tracking-tight text-slate-200 mb-3">
+                    {{ $service->title }}
+                </h3>
+
+                {{-- DESC --}}
+                <p class="relative text-slate-500 text-sm leading-relaxed">
+                    {{ $service->description }}
+                </p>
+
+                {{-- VALUE POINT --}}
+                <ul class="relative mt-4 space-y-2 text-sm text-slate-400">
+                    <li>✔ Analisis profesional</li>
+                    <li>✔ Pendekatan terukur</li>
+                    <li>✔ Tim berpengalaman</li>
+                </ul>
+
+                {{-- CTA --}}
+                <span class="relative inline-block font-semibold text-gold">
+                    Pelajari Layanan →
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-gold transition-all duration-500 group-hover:w-full"></span>
+                </span>
+            </a>
+        @empty
+            <p class="text-center text-slate-300 col-span-3">
+                Layanan belum tersedia
+            </p>
+        @endforelse
+    </div>
+</div>
+</section>
 
 {{-- CARA KERJA --}}
-<section class="bg-white py-20">
+<section class="bg-dark py-24">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">
+        <h2 class="text-3xl font-bold tracking-tight text-center text-gold mb-12">
             Alur Kerja Kami
         </h2>
 
         <div class="grid md:grid-cols-4 gap-8 text-center">
-            @foreach(['Konsultasi','Analisis','Perencanaan','Finalisasi'] as $step)
-                <div>
-                    <div class="w-12 h-12 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center font-bold mb-4">
+            @foreach(['Konsultasi Awal','Analisis Kebutuhan','Perencanaan Solusi','Pendampingan Proyek'] as $step)
+                <div data-aos="fade-right"
+                    data-aos-delay="{{ $loop->iteration * 150 }}"
+                    class="relative flex flex-col items-center group
+                    transition duration-300 hover:-translate-y-2">
+
+                    {{-- BULATAN --}}
+                    <div class="w-12 h-12 rounded-full bg-gold text-white flex items-center justify-center font-bold mb-4 z-10
+                                transition duration-300
+                                group-hover:scale-110
+                                hover:-translate-y-2 hover:shadow-xl
+                                group-hover:shadow-[0_0_15px_rgba(201,166,70,0.8)]" style="transition-delay: {{ $loop->iteration * 100 }}ms">
                         {{ $loop->iteration }}
                     </div>
-                    <p class="font-semibold">{{ $step }}</p>
+
+                    {{-- GARIS --}}
+                    @if(!$loop->last)
+                        <div class="hidden md:block absolute top-6 left-1/2 translate-x-16 w-[calc(80%-3rem)] h-[2px] bg-gold 
+                                    opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    @endif
+
+                    {{-- TEXT --}}
+                    <p class="font-semibold text-slate-200 leading-relaxed">
+                        {{ $step }}
+                    </p>
+
                 </div>
             @endforeach
         </div>
     </div>
 </section>
 
-
-{{-- PROJECT FOCUS --}}
-<section class="bg-slate-50 py-20">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-10 text-center">
-            Bidang Keahlian Utama
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-xl border hover:border-blue-600 transition">
-                <h4 class="font-semibold mb-2">Perencanaan Arsitektur</h4>
-                <p class="text-gray-600 text-sm">
-                    Hunian, gedung komersial, dan fasilitas publik.
-                </p>
-            </div>
-
-            <div class="bg-white p-8 rounded-xl border hover:border-blue-600 transition">
-                <h4 class="font-semibold mb-2">Manajemen Konstruksi</h4>
-                <p class="text-gray-600 text-sm">
-                    Pengendalian mutu, biaya, dan waktu pelaksanaan proyek.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 {{-- SIAP MULAI? --}}
-<section class="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 mb-0 text-white overflow-hidden">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+<section class="bg-dark2 py-24 mb-0 text-slate-200 overflow-hidden">
+    <div data-aos="zoom-in"
+        class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-3xl text-gold font-bold tracking-tight mb-6">
             Siap Memulai Proyek Anda?
         </h2>
 
-        <p class="text-blue-100 mb-8">
+        <p class="text-slate-400 leading-relaxed mb-8">
             Konsultasikan kebutuhan perencanaan Anda bersama tim profesional kami.
         </p>
+        <p class="text-sm text-slate-500 leading-relaxed mb-4">
+            Atau hubungi kami langsung via WhatsApp
+        </p>
 
-        <a href="contact"
-           class="inline-block bg-blue-600 text-white font-semibold
+        <a href="https://wa.me/6281296990171?text=Halo,%20Saya%20ingin%20konsultasi%20mengenai%20proyek!"
+           class="inline-block bg-gold text-white font-semibold
                   px-8 py-4 rounded-xl shadow
-                  hover:scale-105 transition">
-            Hubungi Kami
+                  hover:scale-105 transition  
+                  hover:shadow-[0_0_25px_rgba(201,166,70,0.9)]">
+            Mulai Konsultasi Sekarang
         </a>
+        <p class="text-sm text-slate-400 leading-relaxed mt-3">
+            Gratis konsultasi awal • Respon cepat
+        </p>
     </div>
 </section>
 

@@ -53,31 +53,21 @@ class AdminConsultationController extends Controller
         return view('admin.consultation.show', compact('consultation'));
     }
 
-    public function updateStatus(Request $request, Consultation $consultation)
+    public function updateStatus(Request $request, $id)
     {
-        $request->validate([
-            'status' => 'required|in:pending,process,done'
-        ]);
+        $consultation = Consultation::findOrFail($id);
 
-        $consultation->update([
-            'status' => $request->status
-        ]);
+        $consultation->status = $request->status;
+        $consultation->save();
 
-        $consultation->activities()->create([
-            'action' => 'status_updated',
-            'description' => "Status diubah ke {$request->status}",
-            'admin_id' => auth()->id(),
-        ]);
-
-        // kirim notifikasi ke client
-        $client = $consultation->user;
-
-        if ($client && $client->role === 'client') {
-            $client->notify(
+        // 🔥 kirim notifikasi ke client
+        if ($consultation->user) {
+            $consultation->user->notify(
                 new ConsultationStatusUpdated($consultation)
             );
         }
-        return back()->with('success', 'Status konsultasi diperbarui');
+
+        return back()->with('success', 'Status berhasil diupdate');
     }
 
     public function export(Consultation $consultation)

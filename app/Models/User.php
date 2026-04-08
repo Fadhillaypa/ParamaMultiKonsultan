@@ -23,7 +23,7 @@ class User extends Authenticatable
         'password',
         'google_id',
         'avatar',
-        'role',
+        'is_admin',
         'provider',
         'provider_id',
     ];
@@ -48,21 +48,21 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function isAdmin()
+    {
+        return $this->is_admin;
+    }
+    
     public function isClient()
     {
-        return $this->role === 'client';
-
-        if ($consultation->user?->isClient()) {
-            $consultation->user->notify(new ConsultationStatusUpdated($consultation));
-        }
+        return !$this->is_admin;
     }
 
     public function roleBadge()
     {
-        return match ($this->role) {
-            'admin' => ['Admin', 'red'],
-            default => ['Client', 'green'],
-        };
+        return $this->is_admin
+            ? ['Admin', 'red']
+            : ['Client', 'green'];
     }
 
 }

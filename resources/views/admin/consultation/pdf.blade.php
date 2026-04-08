@@ -162,7 +162,7 @@
         CV. Parama Multi Konsultan
 
         <div class="signature-space"></div>
-        <strong>Ir. Johan</strong>
+        <strong>Ir. Johan Setyo</strong>
     </div>
 </div>
 

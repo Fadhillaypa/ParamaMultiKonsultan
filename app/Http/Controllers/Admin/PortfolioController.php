@@ -3,33 +3,26 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use App\Models\Portfolio;
 
 class PortfolioController extends Controller
 {
     public function index()
     {
         $portfolios = Portfolio::latest()->get();
-        return view('admin.portfolio.index', compact('portfolios'));
+
+        return view('admin.portfolios.index', compact('portfolios'));
     }
 
     public function create()
     {
-        return view('admin.portfolio.create');
+        return view('admin.portfolios.create');
     }
 
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'title' => 'required',
-            'client' => 'nullable',
-            'location' => 'nullable',
-            'year' => 'nullable',
-            'service_type' => 'nullable',
-            'description' => 'nullable',
-            'thumbnail' => 'nullable|image',
-        ]);
+        $data = $request->all();
 
         if ($request->hasFile('thumbnail')) {
             $data['thumbnail'] = $request->file('thumbnail')
@@ -38,27 +31,17 @@ class PortfolioController extends Controller
 
         Portfolio::create($data);
 
-        return redirect()
-            ->route('admin.portfolios.index')
-            ->with('success', 'Portfolio berhasil ditambahkan');
+        return redirect()->route('admin.portfolios.index');
     }
 
     public function edit(Portfolio $portfolio)
     {
-        return view('admin.portfolio.edit', compact('portfolio'));
+        return view('admin.portfolios.edit', compact('portfolio'));
     }
 
     public function update(Request $request, Portfolio $portfolio)
     {
-        $data = $request->validate([
-            'title' => 'required',
-            'client' => 'nullable',
-            'location' => 'nullable',
-            'year' => 'nullable',
-            'service_type' => 'nullable',
-            'description' => 'nullable',
-            'thumbnail' => 'nullable|image',
-        ]);
+        $data = $request->all();
 
         if ($request->hasFile('thumbnail')) {
             $data['thumbnail'] = $request->file('thumbnail')
@@ -67,17 +50,12 @@ class PortfolioController extends Controller
 
         $portfolio->update($data);
 
-        return redirect()
-            ->route('admin.portfolios.index')
-            ->with('success', 'Portfolio berhasil diperbarui');
+        return redirect()->route('admin.portfolios.index');
     }
 
     public function destroy(Portfolio $portfolio)
     {
         $portfolio->delete();
-
-        return redirect()
-            ->route('admin.portfolios.index')
-            ->with('success', 'Portfolio berhasil dihapus');
+        return back()->with('success', 'Portfolio berhasil dihapus');
     }
 }

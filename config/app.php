@@ -185,4 +185,6 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'admin_emails' => explode(',', env('ADMIN_EMAILS', '')),
+
 ];
