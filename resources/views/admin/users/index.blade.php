@@ -72,6 +72,9 @@
         @endforeach
     </tbody>
 </table>
+<p class="text-sm text-slate-400 mt-3">
+            Total: {{ count($users) }} User
+        </p>
 
 <script>
     $(document).ready(function () {

@@ -130,7 +130,7 @@
 
                 @forelse($service->benefits ?? [] as $item)
                     <p class="text-slate-300 space-y-3 font-medium text-sm"
-                        data-aos="fade-up" data-aos-delay="100">
+                    data-aos="fade-up" data-aos-delay="100">
                         ✔ {{ $item }}
                     </p>
                 @empty

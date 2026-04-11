@@ -134,7 +134,7 @@
         </tbody>
 </table>
     <p class="text-sm text-slate-400 mt-3">
-        Total: {{ $consultations->total() }} data
+        Total: {{ $consultations->total() }} Data
     </p>
 </div>
 </div>

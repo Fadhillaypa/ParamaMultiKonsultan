@@ -38,6 +38,18 @@
         </svg>
         @break
 
+    @case('layers')
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.5"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 2l10 6-10 6-10-6 10-6z"/>
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2 12l10 6 10-6"/>
+        </svg>
+        @break
+
     @default
-        <div class="w-10 h-10 bg-gray-300 rounded"></div>
+    <svg class="w-10 h-10 text-gray-400">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none"/>
+    </svg>
 @endswitch

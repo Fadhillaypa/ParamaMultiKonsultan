@@ -110,8 +110,8 @@
             </tbody>
 
         </table>
-        <p class="text-sm text-slate-400 mt-3 ml-4">
-            Total: {{ count($portfolios) }} portfolio
+        <p class="text-sm text-slate-400 mt-3">
+            Total: {{ count($portfolios) }} Data
         </p>
     </div>
 

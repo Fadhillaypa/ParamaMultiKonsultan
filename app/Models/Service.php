@@ -8,11 +8,15 @@ use Illuminate\Support\Str;
 
 class Service extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
     'title',
     'description',
     'long_description',
-    'benefits'
+    'benefits',
+    'slug',
+    'icon',
     ];
 
     protected $casts = [

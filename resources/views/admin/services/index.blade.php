@@ -56,6 +56,9 @@
         </tbody>
 
     </table>
+    <p class="text-sm text-slate-400 mt-3">
+            Total: {{ count($services) }} Data
+        </p>
 
 </div>
 </div>

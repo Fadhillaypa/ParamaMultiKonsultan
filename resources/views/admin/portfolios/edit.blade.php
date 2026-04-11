@@ -56,7 +56,8 @@
 
         <div class="flex justify-end gap-3">
             <a href="{{ route('admin.portfolios.index') }}"
-               class="px-5 py-2 border border-slate-500 text-slate-300 rounded-xl">
+               class="px-5 py-2 border border-slate-500 text-slate-300 rounded-xl hover:bg-red-400 hover:text-white
+                        transition duration-300">
                 Batal
             </a>
 

@@ -108,8 +108,8 @@
                 <div class="company-info">
                     Konsultan Manajemen & Perencanaan<br>
                     Anggota INKINDO<br>
-                    Email: info@paramamultikonsultan.co.id<br>
-                    Telp: 08xxxxxxxx
+                    Email: parama.multikonsult@gmail.com<br>
+                    Telp: 0812-9699-0171
                 </div>
             </td>
         </tr>
@@ -162,7 +162,7 @@
         CV. Parama Multi Konsultan
 
         <div class="signature-space"></div>
-        <strong>Ir. Johan Setyo</strong>
+        <strong>Ir. Johan Setyo Winanto, S.T., IPP</strong>
     </div>
 </div>
 

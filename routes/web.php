@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\PortfolioController as AdminPortfolioController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\PortfolioController;
 
 
 
@@ -20,7 +21,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/about', fn () => view('pages.about'))->name('about');
 Route::get('/contact', fn () => view('pages.contact'))->name('contact');
-Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+Route::get('/services/{service:slug}', [ServiceController::class, 'show'])->name('services.show');
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
 Route::get('/portfolio/{portfolio}', [PortfolioController::class, 'show'])

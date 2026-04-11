@@ -37,9 +37,10 @@
                 Login dengan Google
             </a>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Sudah memiliki akun?') }}
+        <div class="text-center mt-6 text-sm text-slate-400">
+            Sudah punya akun?
+            <a href="{{ route('login') }}" class="text-gold hover:underline">
+                Login di sini
             </a>
         </div>
     </form>

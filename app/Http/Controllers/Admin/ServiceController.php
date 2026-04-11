@@ -12,7 +12,7 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::latest()->get();
-        $service->slug = Str::slug($request->title);
+        
         return view('admin.services.index', compact('services'));
     }
 
@@ -23,23 +23,33 @@ class ServiceController extends Controller
 
     public function store(Request $request)
     {
-        $benefits = explode("\n", $request->benefits);
+        // ✅ VALIDASI
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        // ✅ BENEFITS → ARRAY
+        $benefits = array_filter(array_map('trim', explode("\n", $request->benefits)));
+
+        // ✅ SLUG UNIQUE
         $base = Str::slug($request->title);
         $slug = $base;
         $i = 1;
 
-        while (\App\Models\Service::where('slug', $slug)->exists()) {
+        while (Service::where('slug', $slug)->exists()) {
             $slug = $base . '-' . $i;
             $i++;
         }
 
-        $service->slug = $slug;
-
+        // ✅ SIMPAN DATA (INI KUNCI UTAMA)
         Service::create([
             'title' => $request->title,
             'description' => $request->description,
             'long_description' => $request->long_description,
             'benefits' => $benefits,
+            'slug' => $slug,
+            'icon' => $request->icon,
         ]);
 
         return redirect()->route('admin.services.index')->with('success', 'Service berhasil ditambahkan');
@@ -55,7 +65,7 @@ class ServiceController extends Controller
     {
         $service = Service::findOrFail($id);
 
-        $benefits = explode("\n", $request->benefits);
+        $benefits = array_filter(array_map('trim', explode("\n", $request->benefits)));
         $base = Str::slug($request->title);
         $slug = $base;
         $i = 1;
@@ -65,13 +75,12 @@ class ServiceController extends Controller
             $i++;
         }
 
-        $service->slug = $slug;
-
         $service->update([
             'title' => $request->title,
             'description' => $request->description,
             'long_description' => $request->long_description,
             'benefits' => $benefits,
+            'icon' => $request->icon,
         ]);
 
         return redirect()->route('admin.services.index')->with('success', 'Service berhasil diupdate');
