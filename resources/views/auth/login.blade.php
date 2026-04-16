@@ -1,15 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
 
-<div class="min-h-screen flex items-center justify-center px-4 bg-dark relative overflow-hidden">
+<div class="relative w-full max-w-md">
 
-    {{-- BACKGROUND GLOW --}}
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,166,70,0.08),transparent)]"></div>
+        {{-- MOBILE LOGO --}}
+        <div class="md:hidden text-center mb-6">
+            <img src="{{ asset('images/logo.png') }}" class="mx-auto h-14 mb-3">
 
-    <div class="relative w-full max-w-md">
+            <h1 class="text-lg font-semibold text-gold">
+                Parama Multi Konsultan
+            </h1>
+        </div>
 
-        <div class="bg-dark2/90 backdrop-blur p-8 rounded-2xl shadow-xl border border-gold/30">
+        {{-- CARD --}}
+        <div data-aos="fade-up"
+            data-aos-duration="800"
+            class="bg-dark2/90 backdrop-blur p-8 rounded-2xl shadow-xl border border-gold/30">
 
             {{-- TITLE --}}
             <h2 class="text-gold text-3xl font-bold text-center mb-2">
@@ -37,10 +44,43 @@
                 </div>
 
                 {{-- PASSWORD --}}
-                <div>
-                    <input type="password" name="password" placeholder="Password"
+                <div x-data="{ show: false }" class="relative">
+                    <input 
+                        :type="show ? 'text' : 'password'" 
+                        name="password" 
+                        placeholder="Password"
                         class="w-full px-4 py-3 rounded-xl bg-gray-800 text-white 
-                        focus:outline-none focus:ring-2 focus:ring-gold transition">
+                            focus:outline-none focus:ring-2 focus:ring-gold transition pr-12">
+
+                    {{-- ICON --}}
+                    <button type="button" 
+                        @click="show = !show"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-gold">
+
+                        {{-- EYE OFF --}}
+                        <svg x-show="show" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M2.458 12C3.732 7.943 7.523 5 12 5
+                                    c4.478 0 8.268 2.943 9.542 7
+                                    -1.274 4.057-5.064 7-9.542 7
+                                    -4.477 0-8.268-2.943-9.542-7z"/>
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+
+                        {{-- EYE --}}
+                        <svg x-show="!show" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M13.875 18.825A10.05 10.05 0 0112 19
+                                    c-4.478 0-8.268-2.943-9.542-7
+                                    a9.956 9.956 0 012.042-3.362"/>
+                            <path d="M6.223 6.223A9.956 9.956 0 0112 5
+                                    c4.478 0 8.268 2.943 9.542 7
+                                    a9.956 9.956 0 01-4.132 5.411"/>
+                            <path d="M15 12a3 3 0 00-3-3"/>
+                            <path d="M3 3l18 18"/>
+                        </svg>
+
+                    </button>
                 </div>
 
                 {{-- REMEMBER --}}
@@ -86,6 +126,5 @@
         </div>
 
     </div>
-</div>
 
 @endsection

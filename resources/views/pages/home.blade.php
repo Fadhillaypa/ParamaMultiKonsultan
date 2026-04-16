@@ -307,7 +307,7 @@
                   hover:shadow-[0_0_25px_rgba(201,166,70,0.9)]">
             Mulai Konsultasi Sekarang
         </a>
-        <p class="text-sm text-slate-400 leading-relaxed mt-3">
+        <p class="text-sm text-slate-500 leading-relaxed mt-3">
             Gratis konsultasi awal • Respon cepat
         </p>
     </div>
